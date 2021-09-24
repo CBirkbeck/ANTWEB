@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [ ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Algebraic Number Theory: Irreducible polynomials</title>
+<link rel="next" href="sect0004.html" title="Field extensions" />
+<link rel="prev" href="sect0002.html" title="Recap on rings and fields" />
+<link rel="up" href="sect0001.html" title="Number Fields" />
+<link rel="stylesheet" href="styles/theme-white.css" />
+<link rel="stylesheet" href="styles/amsthm.css" />
+</head>
+
+<body>
+<header>
+<svg  id="toc-toggle" class="icon icon-list-numbered "><use xlink:href="symbol-defs.svg#icon-list-numbered"></use></svg>
+<h1 id="doc_title"><a href="index.html">Algebraic Number Theory</a></h1>
+</header>
+
+<div class="wrapper">
+<nav class="toc">
+<ul class="sub-toc-0">
+<li class=" active">
+  <a href="sect0001.html"><span class="toc_ref">1</span> <span class="toc_entry">Number Fields</span></a>
+  <span class="expand-toc">▼</span>
+  <ul class="sub-toc-1 active">
+     <li class="">
+  <a href="sect0002.html"><span class="toc_ref">1.1</span> <span class="toc_entry">Recap on rings and fields</span></a>
+ </li>
+<li class=" active current">
+  <a href="sect0003.html"><span class="toc_ref">1.2</span> <span class="toc_entry">Irreducible polynomials</span></a>
+ </li>
+<li class="">
+  <a href="sect0004.html"><span class="toc_ref">1.3</span> <span class="toc_entry">Field extensions</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-2">
+     <li class="">
+  <a href="sect0005.html"><span class="toc_ref">1.3.6</span> <span class="toc_entry">Algebraic extensions</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0006.html"><span class="toc_ref">1.4</span> <span class="toc_entry">Algebraic numbers and number fields</span></a>
+ </li>
+<li class="">
+  <a href="sect0007.html"><span class="toc_ref">1.5</span> <span class="toc_entry">Embeddings</span></a>
+ </li>
+<li class="">
+  <a href="sect0008.html"><span class="toc_ref">1.6</span> <span class="toc_entry">The standard representation</span></a>
+ </li>
+<li class="">
+  <a href="sect0009.html"><span class="toc_ref">1.7</span> <span class="toc_entry">Norm and Trace</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0010.html"><span class="toc_ref">2</span> <span class="toc_entry">Algebraic integers</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0011.html"><span class="toc_ref">2.1</span> <span class="toc_entry">Rings of integers</span></a>
+ </li>
+<li class="">
+  <a href="sect0012.html"><span class="toc_ref">2.2</span> <span class="toc_entry">Discriminants</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-2">
+     <li class="">
+  <a href="sect0013.html"><span class="toc_ref">2.2.15</span> <span class="toc_entry">Formulae for calculating discriminants</span></a>
+ </li>
+<li class="">
+  <a href="sect0014.html"><span class="toc_ref">2.2.23</span> <span class="toc_entry">Discriminants of trinomials</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0015.html"><span class="toc_ref">2.3</span> <span class="toc_entry">Cyclotomic fields</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0016.html"><span class="toc_ref">3</span> <span class="toc_entry">Factorization in rings of integers</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0017.html"><span class="toc_ref">3.1</span> <span class="toc_entry">Units</span></a>
+ </li>
+<li class="">
+  <a href="sect0018.html"><span class="toc_ref">3.2</span> <span class="toc_entry">Ideals in rings of integers</span></a>
+ </li>
+<li class="">
+  <a href="sect0019.html"><span class="toc_ref">3.3</span> <span class="toc_entry">Dedekind domains</span></a>
+ </li>
+<li class="">
+  <a href="sect0020.html"><span class="toc_ref">3.4</span> <span class="toc_entry">Norms of ideals</span></a>
+ </li>
+<li class="">
+  <a href="sect0021.html"><span class="toc_ref">3.5</span> <span class="toc_entry">Splitting of prime ideals</span></a>
+ </li>
+<li class="">
+  <a href="sect0022.html"><span class="toc_ref">3.6</span> <span class="toc_entry">Embeddings and prime ideals</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0023.html"><span class="toc_ref">4</span> <span class="toc_entry">The ideal class group</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0024.html"><span class="toc_ref">4.1</span> <span class="toc_entry">Computing class groups</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0025.html"><span class="toc_ref">5</span> <span class="toc_entry">Solving Diophantine equations</span></a>
+ </li>
+<li class="">
+  <a href="sect0026.html"><span class="toc_ref">6</span> <span class="toc_entry">Geometry of numbers</span></a>
+ </li>
+<li class="">
+  <a href="sect0027.html"><span class="toc_ref">7</span> <span class="toc_entry">Bibliography</span></a>
+ </li>
+</ul>
+</nav>
+
+<div class="content">
+<div class="content-wrapper">
+
+
+<div class="main-text">
+<h1 id="a0000000004">1.2 Irreducible polynomials</h1>
+<p> How do we define more exotic fields? Well a good way is to take quotients of polynomial rings. </p>
+<p><div class="defn_thmwrapper theorem-style-definition" id="a0000000057">
+  <div class="defn_thmheading">
+    <span class="defn_thmcaption">
+    Definition
+    </span>
+    <span class="defn_thmlabel">1.2.1</span>
+  </div>
+  <div class="defn_thmcontent">
+  <p>Let \(R\) be an integral domain. A non-zero polynomial \(p(x)\) of degree at least \(1\) in \(R[x]\) is said to be irreducible if whenever \(p(x)=f(x)g(x)\) with \(f(x),g(x) \in R[x]\) then one of \(f(x)\) or \(g(x)\) is in \(R\). Note this is slightly different to Definition <a href="sect0002.html#defn: irr elt">1.1.14</a>. </p>
+
+  </div>
+</div> </p>
+<p><div class="exmp_thmwrapper theorem-style-definition" id="a0000000058">
+  <div class="exmp_thmheading">
+    <span class="exmp_thmcaption">
+    Example
+    </span>
+    <span class="exmp_thmlabel">1.2.2</span>
+  </div>
+  <div class="exmp_thmcontent">
+  <p>The polynomial \(x^2+1\) is irreducible in \(\mathbb {Z}[x]\). </p>
+
+  </div>
+</div> </p>
+<p><div class="nexmp_thmwrapper theorem-style-definition" id="a0000000059">
+  <div class="nexmp_thmheading">
+    <span class="nexmp_thmcaption">
+    Non-example
+    </span>
+    <span class="nexmp_thmlabel">1.2.3</span>
+  </div>
+  <div class="nexmp_thmcontent">
+  <p>The polynomial \(x^2-1\) is not irreducible in \(\mathbb {Z}[x]\) since it is \((x-1)(x+1)\) and neither is a unit. </p>
+
+  </div>
+</div> </p>
+<p><div class="question_thmwrapper theorem-style-definition" id="Q1">
+  <div class="question_thmheading">
+    <span class="question_thmcaption">
+    Exercise
+    </span>
+    <span class="question_thmlabel">1.2.4</span>
+  </div>
+  <div class="question_thmcontent">
+  <p> Let \(F\) be a field. Check that the only units in \(F[x]\) are given by polynomials of degree \(0\), i.e., they are elements of \(F\). </p>
+
+  </div>
+</div> </p>
+<p><div class="question_thmwrapper theorem-style-definition" id="a0000000060">
+  <div class="question_thmheading">
+    <span class="question_thmcaption">
+    Exercise
+    </span>
+    <span class="question_thmlabel">1.2.5</span>
+  </div>
+  <div class="question_thmcontent">
+  <p>True or False: If \(p(x)\) is reducible in \(F[x]\) then there exists \(\alpha \in F\) such that \(f(\alpha )=0\) (i.e it has a root in \(F\)). </p>
+
+  </div>
+</div> Now, here is a proposition whose content you should’ve seen in a previous course covering ring theory or commutative algebra </p>
+<p><div class="prop_thmwrapper theorem-style-plain" id="prop: background ring theory">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">1.2.6</span>
+  </div>
+  <div class="prop_thmcontent">
+  <p> Let \(F\) be a field. </p>
+<ol class="enumerate">
+  <li><p>\(F[x]\) is a Euclidean domain and thus a Principal Ideal Domain (PID). </p>
+</li>
+  <li><p>In a PID, the ideal generated by a irreducible element is prime. </p>
+</li>
+  <li><p>Every non-zero prime ideal in a PID is maximal. </p>
+</li>
+  <li><p>Every PID is a UFD. </p>
+</li>
+</ol>
+
+  </div>
+</div> </p>
+<p><div class="rmrk_thmwrapper theorem-style-definition" id="a0000000061">
+  <div class="rmrk_thmheading">
+    <span class="rmrk_thmcaption">
+    Remark
+    </span>
+    <span class="rmrk_thmlabel">1.2.7</span>
+  </div>
+  <div class="rmrk_thmcontent">
+  <p>Let me just remind you why \(F[x]\) is a Euclidean domain. This is because if you have two polynomials \(f(x),g(x)\) then we can do polynomial long division to write, \(f(x)=q(x)g(x)+r(x)\) where \(\deg (g) \leq \deg (f)\) and \(\deg (r) {\lt} \deg (g)\) (this last bit having a strict inequality is what is important). </p>
+
+  </div>
+</div> </p>
+<p>Ok great, so if we want to create fields then we just need to find some irreducible polynomials and then just need to quotient out by it. In other words: </p>
+<p><div class="prop_thmwrapper theorem-style-plain" id="propo: quot by irr pol gives field">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">1.2.8</span>
+  </div>
+  <div class="prop_thmcontent">
+  <p> Let \(F\) be a field, and \(p(x)\) an irreducible polynomial in \(F[x]\). Then </p>
+<div class="displaymath" id="a0000000062">
+  \[ F[x]/(p(x)) \]
+</div>
+<p> is a field. </p>
+
+  </div>
+</div> </p>
+<p><div class="rmrk_thmwrapper theorem-style-definition" id="a0000000063">
+  <div class="rmrk_thmheading">
+    <span class="rmrk_thmcaption">
+    Remark
+    </span>
+    <span class="rmrk_thmlabel">1.2.9</span>
+  </div>
+  <div class="rmrk_thmcontent">
+  <p>(In case you’ve forgotten.) What does this field look like? well its elements can be thought of as \(f(x)+a(x) p(x)\) where \(f(x), a(x) \in F[x]\). Here \(p(x)\) is the zero of this field, so \(f(x)\) and \(f+a(x)p(x)\) represent the same element in this field for any \(a(x)\). </p>
+
+  </div>
+</div> </p>
+<p>Ok, so how do we check if a polynomial is irreducible? Let look at the case we will most care about, which is \(\mathbb {Q}[x]\). Now, we have the following Lemmas which you may have seen in the Galois theory course or algebra course, so we wont prove them: <div class="lem_thmwrapper theorem-style-plain" id="a0000000064">
+  <div class="lem_thmheading">
+    <span class="lem_thmcaption">
+    Lemma
+    </span>
+    <span class="lem_thmlabel">1.2.10</span>
+    <span class="lem_thmtitle">Gauss’s Lemma</span>
+  </div>
+  <div class="lem_thmcontent">
+  <p> A polynomial is irreducible in \(\mathbb {Z}[x]\) if and only if it is irreducible in \(\mathbb {Q}[x]\). </p>
+
+  </div>
+</div> </p>
+<p>Here is a slightly different version for monic polynomials </p>
+<p><div class="lem_thmwrapper theorem-style-plain" id="monic gauss">
+  <div class="lem_thmheading">
+    <span class="lem_thmcaption">
+    Lemma
+    </span>
+    <span class="lem_thmlabel">1.2.11</span>
+    <span class="lem_thmtitle">Monic Gauss Lemma</span>
+  </div>
+  <div class="lem_thmcontent">
+  <p> Let \(f \in \mathbb {Z}[x]\) be monic and assume that \(f=gh\) with \(g,h \in \mathbb {Q}[x]\) which are also monic. Then \(g,h \in \mathbb {Z}[x]\). </p>
+
+  </div>
+</div> </p>
+<p><div class="rmrk_thmwrapper theorem-style-definition" id="a0000000065">
+  <div class="rmrk_thmheading">
+    <span class="rmrk_thmcaption">
+    Remark
+    </span>
+    <span class="rmrk_thmlabel">1.2.12</span>
+  </div>
+  <div class="rmrk_thmcontent">
+  <p>Convince yourself that both these lemmas deserve to be named similarly. </p>
+
+  </div>
+</div> This reduces us to checking if a polynomial is irreducible over \(\mathbb {Z}[x]\). </p>
+<p><div class="prop_thmwrapper theorem-style-plain" id="prop: irred pol mod p">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">1.2.13</span>
+  </div>
+  <div class="prop_thmcontent">
+  <p> If \(f(x)\) is a polynomial in \(\mathbb {Z}[x]\), let \(\bar{f}(x)\) denote its image in \(\mathbb {F}_p[x]\). A polynomial \(f(x)\) in \(\mathbb {Z}[x]\) is irreducible, if we can find some prime number \(p\) such that \(f(x)\) and \(\bar{f}(x)\) have the same degree and \(\bar{f}(x)\) is irreducible in \(\mathbb {F}_p[x]\). </p>
+
+  </div>
+</div> </p>
+<div class="proof_wrapper" id="a0000000066">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">â–¼</span>
+  </div>
+  <div class="proof_content">
+  <p>This is the same as proving that, if \(f(x)\) is reducible in \(\mathbb {Z}[x]\) then it is also reducible in \(\mathbb {F}_p[x]\), which is obvious. </p>
+
+  </div>
+</div>
+<p>Lastly, we have: </p>
+<p><div class="prop_thmwrapper theorem-style-plain" id="prop: shonemann">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">1.2.14</span>
+    <span class="prop_thmtitle">Shönemann’s Irreducibility Criterion</span>
+  </div>
+  <div class="prop_thmcontent">
+  <p> Let \(f(x) \in \mathbb {Z}[x]\) be a monic polynomial of degree \(n{\gt}0\). Assume that there is a prime \(p\) and an integer \(a\) such that </p>
+<div class="displaymath" id="a0000000067">
+  \[ f(x)=(x-a)^n+pg(x) \]
+</div>
+<p> for \(g(x) \in \mathbb {Z}[x]\). If \(g(a) \not\equiv 0 \bmod p\) then \(f(x)\) is irreducible modulo \(p^2\) and in \(\mathbb {Z}[x]\). </p>
+
+  </div>
+</div> </p>
+<div class="proof_wrapper" id="a0000000068">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">â–¼</span>
+  </div>
+  <div class="proof_content">
+  <p>Assume for contradiction that </p>
+<div class="displaymath" id="a0000000069">
+  \[ f(x) \equiv r(x)s(x) \bmod p^2, \]
+</div>
+<p> where WLOG \(r(x),s(x)\) are monic. Now, if we instead look at this modulo \(p\), we have \((x-a)^n \equiv r(x)s(x) \bmod p\) and therefore, since we are in \(\mathbb {F}_p[x]\) which is a UFD, we must have \(r(x) \equiv (x-a)^i \bmod p\) and \(s(x) \equiv (x-a)^j \bmod p\) with \(i+j=n\) and \(i,j{\gt}0\). If we now evaluate at \(x=a\) we see that </p>
+<div class="displaymath" id="a0000000070">
+  \[ r(a) \equiv s(a) \equiv 0 \bmod p \]
+</div>
+<p> as \(i,j {\gt}0\). But if we now go back to </p>
+<div class="displaymath" id="a0000000071">
+  \[ f(x) \equiv r(x)s(x) \bmod p^2 \]
+</div>
+<p> we see that setting \(x=a\) gives </p>
+<div class="displaymath" id="a0000000072">
+  \[ pg(a) \equiv r(a)s(a) \equiv 0 \bmod p^2, \]
+</div>
+<p> which contradicts \(g(a) \not\equiv 0 \bmod p\). </p>
+<p>Now, since we are irreducible modulo \(p^2\) we are also irreducible in \(\mathbb {Z}[x]\), since the same argument as in Proposition <a href="sect0003.html#prop: irred pol mod p">1.2.13</a> applies. </p>
+
+  </div>
+</div>
+<p><div class="cor_thmwrapper theorem-style-plain" id="Eis crit">
+  <div class="cor_thmheading">
+    <span class="cor_thmcaption">
+    Corollary
+    </span>
+    <span class="cor_thmlabel">1.2.15</span>
+    <span class="cor_thmtitle">Eisenstein Criterion</span>
+  </div>
+  <div class="cor_thmcontent">
+  <p> Let </p>
+<div class="displaymath" id="a0000000073">
+  \[ f(x)=a_n x^n+a_{n-1}x^{n-1}+ \cdots , a_1x+a_0 \]
+</div>
+<p> be a polynomial in \(\mathbb {Z}[x]\) (with \(n \geq 1)\) and let \(p\) be a prime number. Suppose \(a_n\) is not divisible by \(p\), \(a_{n-1},\dots ,a_0\) are all divisible by \(p\) and \(a_0\) is not divisible by \(p^2\). Then \(f(x)\) is irreducible. </p>
+
+  </div>
+</div> </p>
+<div class="proof_wrapper" id="a0000000074">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">â–¼</span>
+  </div>
+  <div class="proof_content">
+  <p>Since \(a_n \not\equiv 0 \bmod p\), it is invertible. Now let \(b\) be any integer such that \(b \equiv a_n^{-1} \bmod p\), then \(bf(x)=x^n+pg(x)\) for some \(g(x) \in \mathbb {Z}[x]\). Moreover, \(g(0) \not\equiv 0 \bmod p\) since \(a_0\) is not divisible by \(p^2\). Therefore, we satisfy Shönemann’s Irreducibility Criterion and therefore \(bf(x)\) is irreducible and thus so is \(f(x)\). </p>
+
+  </div>
+</div>
+<p><div class="exmp_thmwrapper theorem-style-definition" id="exp: cyclo min pol">
+  <div class="exmp_thmheading">
+    <span class="exmp_thmcaption">
+    Example
+    </span>
+    <span class="exmp_thmlabel">1.2.16</span>
+  </div>
+  <div class="exmp_thmcontent">
+  
+<ol class="enumerate">
+  <li><p>The polynomial \(3x^4+10x+5\) is irreducible in \(\mathbb {Z}[x]\) by Eisensteins criterion with \(p=5\). </p>
+</li>
+  <li><p>Let \(p\) be a prime and let </p>
+<div class="displaymath" id="a0000000075">
+  \[ \Phi _p(x):=\frac{x^p-1}{x-1}=x^{p-1}+\cdots +x+1. \]
+</div>
+<p> Then this is irreducible. Lets prove this: </p>
+<p>Note that we cant apply Eisenstein’s criterion right away, but the trick is to consider </p>
+<div class="displaymath" id="a0000000076">
+  \[ \Phi _p(x+1)=x^{p-1}+px^{p-2}+\cdots +\binom {p}{2}x+p. \]
+</div>
+<p> Now, by properties of binomial coefficients, we see that all coefficients other than the leading one are divisible by \(p\) and the last coefficient isn’t divisible by \(p^2\), so Eisensteins criterion applies. </p>
+</li>
+</ol>
+
+  </div>
+</div> </p>
+<p><div class="question_thmwrapper theorem-style-definition" id="a0000000077">
+  <div class="question_thmheading">
+    <span class="question_thmcaption">
+    Exercise
+    </span>
+    <span class="question_thmlabel">1.2.17</span>
+  </div>
+  <div class="question_thmcontent">
+  <p>Prove that \(f(x) \in \mathbb {Z}[x]\) is irreducible if and only if \(f(x+a)\) is irreducible for any \(a \in \mathbb {Z}\). </p>
+
+  </div>
+</div> </p>
+<p><div class="exmp_thmwrapper theorem-style-definition" id="exmp: more fields">
+  <div class="exmp_thmheading">
+    <span class="exmp_thmcaption">
+    Example
+    </span>
+    <span class="exmp_thmlabel">1.2.18</span>
+  </div>
+  <div class="exmp_thmcontent">
+  <p> Now we have more examples of fields: </p>
+<ol class="enumerate">
+  <li><p>Note that \(x^2-2\) is irreducible in \(\mathbb {Z}[x]\), so </p>
+<div class="displaymath" id="a0000000078">
+  \[ \frac{\mathbb {Q}[x]}{(x^2-2)} \]
+</div>
+<p> is a field. </p>
+</li>
+  <li><p>\(\mathbb {R}[x]/(x^2+1)\) is also a field as \(x^2+1\) is irreducible over \(\mathbb {R}\). This field is isomorphic to \(\mathbb {C}\), but you need to be careful, its not *equal* to \(\mathbb {C}\), only isomorphic to. We will talk about this more below. </p>
+</li>
+  <li><p>Let \(p(x)=x^2+x+1\) in \(\mathbb {F}_2[x]\). Then \(p(x)\) is irreducible in \(\mathbb {F}_2[x]\) and thus </p>
+<div class="displaymath" id="a0000000079">
+  \[ \mathbb {F}_2[x]/(x^2+x+1) \]
+</div>
+<p> is also a field. </p>
+</li>
+</ol>
+
+  </div>
+</div> </p>
+<p><div class="question_thmwrapper theorem-style-definition" id="ques: irr pol mod 2">
+  <div class="question_thmheading">
+    <span class="question_thmcaption">
+    Exercise
+    </span>
+    <span class="question_thmlabel">1.2.19</span>
+  </div>
+  <div class="question_thmcontent">
+  <p> Check that \(p(x)=x^2+x+1\) is irreducible in \(\mathbb {F}_2[x]\). </p>
+
+  </div>
+</div> </p>
+<p>Lastly, here is a fact about finite fields we will use several times later but we wont prove. </p>
+<p><div class="prop_thmwrapper theorem-style-plain" id="a0000000080">
+  <div class="prop_thmheading">
+    <span class="prop_thmcaption">
+    Proposition
+    </span>
+    <span class="prop_thmlabel">1.2.20</span>
+  </div>
+  <div class="prop_thmcontent">
+  <p>For each integer \(n\) and each prime number \(p\), there is a unique finite field of size \(p^n\). We denote it by \(\mathbb {F}_{p^n}\). Conversely, every finite field has size \(p^n\) for some prime \(p\) and \(n \in \mathbb {Z}_{{\gt} 0}\). </p>
+
+  </div>
+</div> </p>
+
+</div> <!--main-text -->
+</div> <!-- content-wrapper -->
+</div> <!-- content -->
+</div> <!-- wrapper -->
+
+<nav class="prev_up_next">
+  <a href="sect0002.html" title="Recap on rings and fields"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+</a>
+  <a href="sect0001.html" title="Number Fields"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+</a>
+  <a href="sect0004.html" title="Field extensions"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
+</a>
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+</body>
+</html>
