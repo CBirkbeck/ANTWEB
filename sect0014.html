@@ -148,11 +148,11 @@
     <span class="lem_thmlabel">2.2.24</span>
   </div>
   <div class="lem_thmcontent">
-  <p> Let \(\alpha \) be an algebraic number with minimal polynomial \(m_\alpha \) and let \(\beta \in \mathbb {Q}(\alpha )\) be such that \(\alpha =\frac{a}{b\beta +c}\) with \(a,b,c \in \mathbb {Q}\) <span style="None"></span>purpleand \(b \neq 0\). Then \(\deg (m_\alpha )=\deg (m_\beta )\). </p>
+  <p> Let \(\alpha \) be an algebraic number with minimal polynomial \(m_\alpha \) and let \(\beta \in \mathbb {Q}(\alpha )\) be such that \(\alpha =\frac{a}{b\beta +c}\) with \(a,b,c \in \mathbb {Q}\) and \(b \neq 0\). Then \(\deg (m_\alpha )=\deg (m_\beta )\). </p>
 
   </div>
 </div> </p>
-<div class="proof_wrapper" id="a0000000245">
+<div class="proof_wrapper" id="a0000000246">
   <div class="proof_heading">
     <span class="proof_caption">
     Proof
@@ -160,10 +160,20 @@
     <span class="expand-proof">â–¼</span>
   </div>
   <div class="proof_content">
-  <p>First consider \(m_\alpha (\alpha )=m_\alpha (\frac{a}{b\beta +c})=0\). By clearing denominators, we see that \(\beta \) satisfies some polynomial \(f(x)\) of degree \(\deg (m_\alpha )\). Therefore, since \(m_\beta \) is the minimal polynomial of \(\beta \) we see that \(m_\beta \) must divide \(f(x)\) and therefore \(\deg (m_\beta ) \leq \deg (m_\alpha )\). </p>
-<p>Now, note that \(\beta =\frac{a}{\alpha b}-\frac{c}{b}=\frac{1}{b}(a\alpha ^{-1}+c)\) <span style="None"></span>purple(as \(b\neq 0\)). The same argument now shows that \(\deg (m_{\alpha ^{-1}}) \leq \deg (m_\beta )\). Now, if you do Exercise <a href="sect0006.html#ex: min pol of inv">1.4.9</a> you will see that \(\deg (m_\alpha )=\deg (m_{\alpha ^{-1}})\), which gives the result. </p>
-<p><span style="None"></span>purpleAlternatively here is a slicker proof by Alexandros Groutides: Note that \(\mathbb {Q}(\alpha )=\mathbb {Q}(\beta )\) (just do double inclusion). Then since \(\deg (m_\beta )=[\mathbb {Q}(\beta ):\mathbb {Q}]=[\mathbb {Q}(\alpha ):\mathbb {Q}]=\deg (m_\alpha )\) (by Cor. <a href="sect0005.html#cor: min pol simple ext">1.3.12</a>) we get the result.  </p>
+  <p>Note that \(\mathbb {Q}(\alpha )=\mathbb {Q}(\beta )\) (just do double inclusion). Then since \(\deg (m_\beta )=[\mathbb {Q}(\beta ):\mathbb {Q}]=[\mathbb {Q}(\alpha ):\mathbb {Q}]=\deg (m_\alpha )\) (by Cor. <a href="sect0005.html#cor: min pol simple ext">1.3.12</a>) we get the result. </p>
 
+  </div>
+</div>
+
+<div class="proof_wrapper" id="a0000000247">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">â–¼</span>
+  </div>
+  <div class="proof_content">
+  
   </div>
 </div>
 <p><div class="thm_thmwrapper theorem-style-plain" id="thm: disc of trinom">
@@ -175,13 +185,13 @@
   </div>
   <div class="thm_thmcontent">
   <p> Let \(K=\mathbb {Q}(\alpha )\) a number field with \(m_\alpha (x)=x^n+ax+b\). Then </p>
-<div class="displaymath" id="a0000000246">
+<div class="displaymath" id="a0000000248">
   \[ \Delta (\{ 1,\alpha ,\dots ,\alpha ^{n-1}\} )=(-1)^{\frac{n(n-1)}{2}}(n^nb^{n-1}+(-1)^{n-1}(n-1)^{n-1}a^n) . \]
 </div>
 
   </div>
 </div> </p>
-<div class="proof_wrapper" id="a0000000247">
+<div class="proof_wrapper" id="a0000000249">
   <div class="proof_heading">
     <span class="proof_caption">
     Proof
@@ -190,28 +200,28 @@
   </div>
   <div class="proof_content">
   <p>From Proposition <a href="sect0013.html#prop: num field disc in terms of norm">2.2.19</a> we have </p>
-<div class="displaymath" id="a0000000248">
+<div class="displaymath" id="a0000000250">
   \[ \Delta (\{ 1,\alpha ,\dots ,\alpha ^{n-1}\} =(-1)^{\frac{n(n-1)}{2}}N_{K/\mathbb {Q}}(m_\alpha '(\alpha ))). \]
 </div>
 <p>Now, let \(\beta =m_\alpha '(\alpha )\), then we have </p>
-<div class="displaymath" id="a0000000249">
+<div class="displaymath" id="a0000000251">
   \[ \beta =n \alpha ^{n-1}+a=-(n-1)a-nb\alpha ^{-1}. \]
 </div>
 <p> Since \(\alpha ^n+a\alpha +b=0\) implies \(n\alpha ^{n-1}=-na-nb\alpha ^{-1}\). Which gives </p>
-<div class="displaymath" id="a0000000250">
+<div class="displaymath" id="a0000000252">
   \[ \alpha =\frac{-nb}{\beta +(n-1)a}. \]
 </div>
 <p> Now, using Lemma <a href="sect0014.html#lem: min pol of lin trans">2.2.24</a> we see that \(n=\deg (m_\alpha )=\deg (m_\beta )\). Moreover, if we take \(m_\alpha (x)=x^n+ax+b\), evaluate at \(\frac{-nb}{\beta +(n-1)a}\) and clear denominators, we get that </p>
-<div class="displaymath" id="a0000000251">
+<div class="displaymath" id="a0000000253">
   \[ (\beta +(n-1)a)^n-na(\beta +(n-1)a)^{n-1}+(-n)^nb^{n-1}=0. \]
 </div>
 <p> Therefore \(\beta \) is a root of </p>
-<div class="displaymath" id="a0000000252">
+<div class="displaymath" id="a0000000254">
   \[ (x+(n-1)a)^n-na(x+(n-1)a)^{n-1}+(-n)^nb^{n-1} \]
 </div>
 <p> which is a monic polynomial of degree \(n=\deg (m_\beta )\), therefore this is the minimal polynomial of \(\beta \). </p>
 <p>Now, by Proposition <a href="sect0008.html#prop: field pol min pol">1.6.6</a> or Corollary <a href="sect0008.html#cor: field to min pol">1.6.8</a> we have \(C_\beta =m_\beta \). Therefore by Proposition <a href="sect0009.html#prop: field pol relation to norm and trace">1.7.3</a> we see that \((-1)^n\) times the constant coefficient of \(m_\beta \) is \(N_{K/\mathbb {Q}}(\beta )\). Therefore we get </p>
-<div class="displaymath" id="a0000000253">
+<div class="displaymath" id="a0000000255">
   \[ N_{K/\mathbb {Q}}(\beta )=n^nb^{n-1}+(-1)^{n-1}(n-1)^{n-1}a^n. \]
 </div>
 <p> which gives the result. </p>
@@ -227,14 +237,14 @@
   </div>
   <div class="cor_thmcontent">
   <p> Let \(K=\mathbb {Q}(\alpha )\) be a number field with \(m_\alpha (x)=x^3+ax+b\). Then </p>
-<div class="displaymath" id="a0000000254">
+<div class="displaymath" id="a0000000256">
   \[ \Delta (\{ 1,\alpha ,\alpha ^2\} )=-27b^2-4a^3. \]
 </div>
 
   </div>
 </div> </p>
 <p>Let \(K=\mathbb {Q}(\alpha )\) a number field with \([K:\mathbb {Q}]=3\). Then \(m_\alpha (x)=x^3+ax^2+bx+c\) for \(a,b,c \in \mathbb {Q}\). If we replace \(\alpha \) with \(\alpha ':=\alpha +a/3\) then \(\mathbb {Q}(\alpha )=\mathbb {Q}(\alpha ')\) but this has the effect of removing the \(x^2\) term in the minimal polynomial, so after relabelling if necessary, we have \(K=\mathbb {Q}(\alpha )\) with \(m_{\alpha }(x)=x^3+ax+b\). Therefore Corollary <a href="sect0014.html#cor: disc of cubic field">2.2.26</a> gives us a quick way to find the discriminant of a cubic field. </p>
-<p><div class="exmp_thmwrapper theorem-style-definition" id="a0000000255">
+<p><div class="exmp_thmwrapper theorem-style-definition" id="a0000000257">
   <div class="exmp_thmheading">
     <span class="exmp_thmcaption">
     Example
@@ -255,7 +265,7 @@
   </div>
   <div class="question_thmcontent">
   <p> Using Theorem <a href="sect0014.html#thm: disc of trinom">2.2.25</a> show what if \(K=\mathbb {Q}(\sqrt{d})\) with \(d\) a square-free integer, then </p>
-<div class="displaymath" id="a0000000256">
+<div class="displaymath" id="a0000000258">
   \[  \Delta (\mathcal{O}_K)= \begin{cases}  d &  \text{if } d \equiv 1 \pmod4 \\ 4d &  \text{if } d \equiv 2,3 \pmod4. \\ \end{cases}  \]
 </div>
 

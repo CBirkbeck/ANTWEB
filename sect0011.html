@@ -344,7 +344,7 @@
   \[ x^2-2ax+ (a^2-db^2). \]
 </div>
 <p> Therefore, \(\alpha \) is an algebraic integer if and only if \(2a\) and \((a^2-db^2)\) are integers. </p>
-<p>Now, since \(2a\) is an integer, we have \(4a^2\) is an integer, and thus \(d(2b)^2\) must be an integer. If \(2b\) was not an integer, then a \(p^2\) (for some prime \(p\)) would appear in the denominator of <span style="None"></span>purple\((2b)^2\). This would force \(d\) to be divisible by \(p^2\) contradicting the square-free assumption. Thus \(2b \in \mathbb {Z}\). </p>
+<p>Now, since \(2a\) is an integer, we have \(4a^2\) is an integer, and thus \(d(2b)^2\) must be an integer. If \(2b\) was not an integer, then a \(p^2\) (for some prime \(p\)) would appear in the denominator of \((2b)^2\). This would force \(d\) to be divisible by \(p^2\) contradicting the square-free assumption. Thus \(2b \in \mathbb {Z}\). </p>
 <p>So let \(u=2a,v=2b\). Then we have \(u^2-dv^2 \equiv 0 \pmod4\). Now, if \(v\) is even, then so is \(u\) in which case \(a,b \in \mathbb {Z}\). So assume \(v\) is odd, we need to show this can only happen if \(d \equiv 1 \mod 4\). Now, \(v^2 \equiv 1 \pmod4\), and \(u^2\) is either \(0,1 \pmod4\). But note it can’t be zero since \(d\) cant be \(0 \pmod4\) as its square-free, therefore \(u^2 \equiv 1 \mod 4\) and hence \(d \equiv 1 \mod 4\). </p>
 
   </div>
@@ -620,8 +620,17 @@
     <span class="defn_thmlabel">2.1.25</span>
   </div>
   <div class="defn_thmcontent">
-  <p> Let \(K\) be a number field and let \(\{ b_1,\dots ,b_n\} \) be a basis for \(K/\mathbb {Q}\). We call this an integral basis if \(\mathcal{O}_K=\mathbb {Z}[b_1,\dots ,b_n]=\{ x_1b_1+\cdots x_nb_n \mid x_i \in \mathbb {Z}\} \) <span style="None"></span>purpleas an additive group. In practice, the set \(\{ b_i\} \) will be some thing like \(\{ 1,\alpha ,\alpha ^2,\dots ,\alpha ^{n-1}\} \) in which case, as rings, we have \(\mathbb {Z}[\alpha ]=\mathbb {Z}[1,\alpha ,\alpha ^2,\dots ,\alpha ^{n-1}]\) </p>
+  <p> Let \(K\) be a number field and let \(\{ b_1,\dots ,b_n\} \) be a basis for \(K/\mathbb {Q}\). We call this an integral basis if \(\mathcal{O}_K=\mathbb {Z}[b_1,\dots ,b_n]=\{ x_1b_1+\cdots x_nb_n \mid x_i \in \mathbb {Z}\} \) as an additive group. In practice, the set \(\{ b_i\} \) will be some thing like \(\{ 1,\alpha ,\alpha ^2,\dots ,\alpha ^{n-1}\} \) in which case, as rings, we have \(\mathbb {Z}[\alpha ]=\mathbb {Z}[1,\alpha ,\alpha ^2,\dots ,\alpha ^{n-1}]\)</p>
 
+  </div>
+</div> <div class="defn_thmwrapper theorem-style-definition" id="a0000000197">
+  <div class="defn_thmheading">
+    <span class="defn_thmcaption">
+    Definition
+    </span>
+  </div>
+  <div class="defn_thmcontent">
+  
   </div>
 </div> </p>
 <p>Ok, so we know what we are looking for, so how are we going to make such a basis. For this we will study the discriminant. </p>
